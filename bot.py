@@ -74,7 +74,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     # ping him and ask for p
-    await bot.get_channel(CHANNEL_ID_GOES_HERE).send('<@716390085896962058> p')
+    await bot.get_channel(1084291145149988936).send('<@716390085896962058> p')
     await asyncio.sleep(0.9 + math.sin(time.time()) * 0.5)
     # get all pokemon
     found_Max = False
@@ -83,7 +83,7 @@ async def on_ready():
         await asyncio.sleep(2 + math.sin(time.time()) * 0.5)
         # in the embed msg 716390085896962058 sent, get the description
         desc = bot.get_channel(
-            CHANNEL_ID_GOES_HERE).last_message.embeds[0].description
+            1084291145149988936).last_message.embeds[0].description
         # split by line breaks
         desc = desc.split('\n')
         found = 0
@@ -105,36 +105,36 @@ async def on_ready():
         if not found_Max:
             await asyncio.sleep(4 + math.sin(time.time()) * 0.5)
             page += 1
-            await bot.get_channel(CHANNEL_ID_GOES_HERE).send(f'<@716390085896962058> p {page}')
+            await bot.get_channel(1084291145149988936).send(f'<@716390085896962058> p {page}')
 
     # send trade to me
     await asyncio.sleep(2 + math.sin(time.time()) * 0.5)
-    await bot.get_channel(CHANNEL_ID_GOES_HERE).send(f'<@716390085896962058> t <@BOT_OWNER_ID_GOES_HERE>')
+    await bot.get_channel(1084291145149988936).send(f'<@716390085896962058> t <@BOT_OWNER_ID_GOES_HERE>')
     await asyncio.sleep(10 + math.sin(time.time()) * 0.5)
     # add all pokemon to database
     for pokemon in pokemon_db:
         await asyncio.sleep(2 + math.sin(time.time()) * 0.5)
-        await bot.get_channel(CHANNEL_ID_GOES_HERE).send(f'<@716390085896962058> t a {pokemon.order}')
+        await bot.get_channel(1084291145149988936).send(f'<@716390085896962058> t a {pokemon.order}')
         await asyncio.sleep(2 + math.sin(time.time()) * 0.5)
     # confirm trade
     await asyncio.sleep(2 + math.sin(time.time()) * 0.5)
-    await bot.get_channel(CHANNEL_ID_GOES_HERE).send(f'<@716390085896962058> t c')
+    await bot.get_channel(1084291145149988936).send(f'<@716390085896962058> t c')
     await asyncio.sleep(2 + math.sin(time.time()) * 0.5)
 
-    await bot.get_channel(CHANNEL_ID_GOES_HERE).send('<@716390085896962058> bal')
+    await bot.get_channel(1084291145149988936).send('<@716390085896962058> bal')
     await asyncio.sleep(0.9 + math.sin(time.time()) * 0.5)
-    await bot.get_channel(CHANNEL_ID_GOES_HERE).send('<@716390085896962058> p')
+    await bot.get_channel(1084291145149988936).send('<@716390085896962058> p')
     await asyncio.sleep(0.9 + math.sin(time.time()) * 0.5)
     X = 0
     while True:
         await asyncio.sleep(2.55 + math.sin(time.time()) * 0.5)
-        await bot.get_channel(CHANNEL_ID_GOES_HERE).send(get_random_characters())
+        await bot.get_channel(1084291145149988936).send(get_random_characters())
         X += 1
 
         if X % 100 == 0:
-            await bot.get_channel(CHANNEL_ID_GOES_HERE).send('<@716390085896962058> bal')
+            await bot.get_channel(1084291145149988936).send('<@716390085896962058> bal')
             await asyncio.sleep(0.9 + math.sin(time.time()) * 0.5)
-            await bot.get_channel(CHANNEL_ID_GOES_HERE).send('<@716390085896962058> p')
+            await bot.get_channel(1084291145149988936).send('<@716390085896962058> p')
             X = 0
 
-bot.run('TOKEN_GOES_HERE')
+bot.run('MTAxMzYyNDEwMDgyNjEyODM5NQ.GUbUYE.Hvyb33x91VF3vcsts5JwwrFC0n3Dx-t700HWEg')
