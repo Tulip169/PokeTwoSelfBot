@@ -136,5 +136,3 @@ async def on_ready():
             await asyncio.sleep(0.9 + math.sin(time.time()) * 0.5)
             await bot.get_channel(1084291145149988936).send('<@716390085896962058> p')
             X = 0
-
-bot.run('MTAxMzYyNDEwMDgyNjEyODM5NQ.GUbUYE.Hvyb33x91VF3vcsts5JwwrFC0n3Dx-t700HWEg')
